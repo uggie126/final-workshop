@@ -15,7 +15,7 @@ export class SupplierPage {
 
   async createSupplierAndDishes(supplierName: string) {
     await this.page.getByText('mode_editLunch Editing').click();
-    //await this.page.getByText('Start by').click();
+    await this.page.getByText('Start by').click();
     await this.page.locator('a').filter({ hasText: 'adding one.' }).click();
 
     await this.page.getByRole('combobox', { name: 'Provider Name' }).fill(supplierName);
